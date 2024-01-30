@@ -3,8 +3,14 @@
 public class TicTacTools
 {
 
-	char[] tester = new char[] { 'X', ' ', 'O', 'O', 'X', ' ', ' ', 'O', 'X' };
+	public static char[] tester = new char[] { 'X', ' ', 'O', 'O', 'X', ' ', ' ', 'O', 'X' };
 
+
+	static void Main()
+    {
+		Console.WriteLine(printBoard(tester));
+	}
+	
 	static string printBoard(char[] array)
 	{
 		//System.Text.StringBuilder sb = new System.Text.StringBuilder();
@@ -16,7 +22,7 @@ public class TicTacTools
 		// sb.Append(item.ToString() + ", ");
 		//}
 
-		for (int x = 0; x < 9, x++)
+		for (int x = 0; x < 9; x++)
 		{
 
 			board += array[x];
@@ -34,9 +40,9 @@ public class TicTacTools
 
 		return board.ToString();
 	}
+
 }
 
-print(printBoard(tester));
 
 // testing
 
