@@ -2,9 +2,9 @@
 
 public class TicTacTools
 {
-	public static char[] tester = new char[] { 'X', ' ', 'O', 'O', 'X', ' ', ' ', 'O', 'X' };
+	public char[] tester = new char[] { 'X', ' ', 'O', 'O', 'X', ' ', ' ', 'O', 'X' };
 
-	public static string printBoard(char[] board)
+	public string printBoard(char[] board)
 	{
 		var stringBuilder = new System.Text.StringBuilder();
 
@@ -29,7 +29,7 @@ public class TicTacTools
 	}
 
 
-	public static char CheckWinner(char[] board)
+	public char CheckWinner(char[] board)
 	{
 		// Winning combinations: rows, columns, diagonals
 		int[,] winningCombinations = new int[,]
