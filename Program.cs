@@ -10,18 +10,20 @@ public string checkWinner(array)
 The “Driver” class (the Program.cs class with the main method where the program begins) will: 
     • Welcome the user to the game 
     • Create a game board array to store the players’ choices 
-• Ask each player in turn for their choice and update the game board array 
-• Print the board by calling the method in the supporting class 
-• Check for a winner by calling the method in the supporting class, 
+    • Ask each player in turn for their choice and update the game board array 
+    • Print the board by calling the method in the supporting class 
+    • Check for a winner by calling the method in the supporting class, 
     and notify the players when a win has occurred and which player won the game 
 */
-
 TicTacTools tt = new TicTacTools();
 
 bool playAgain = true;
-char turn = 'X';
 bool winner = false;
 int position = 0;
+char turn = 'X';
+string checkWin = "";
+string again = "";
+string board = "";
 
 
 Console.WriteLine("Welcome to TicTacToe!");
@@ -33,6 +35,9 @@ do
 {
     // Clear game board
     gameBoard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+    Console.WriteLine("New game!!");
+    Console.WriteLine();
+    Console.WriteLine(tt.printBoard(gameBoard));
 
     // Keep playing while there is no winner
     while (winner == false);
@@ -55,11 +60,36 @@ do
 
         // Update array and pass it to printBoard
         gameBoard[position - 1] = turn;
-        //printBoard(gameBoard);
 
+        board = tt.printBoard(gameBoard);
+
+        Console.WriteLine(tt.printBoard(gameBoard));
+
+        checkWin = tt.checkWinner(gameBoard);
+
+        // Check for a winner
+        if (checkWin.Equals("None"))
+        {
+            // No winner yet, just keep going
+        }
+        else
+        {
+            // Somebody won!
+            winner = true;
+
+            Console.WriteLine("Game over, " + checkWin + "'s won!");
+        }
     }
 
+    // Ask if they want to play again
+    Console.WriteLine("Do you want to play again? y/n:");
+    again = Console.ReadLine();
 
+    if (again == "n")
+    {
+        playAgain = false;
+    }
+    // bulletproof and handle responses other than y/n
     
 } while (playAgain = true);
 
