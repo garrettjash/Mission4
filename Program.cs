@@ -2,20 +2,6 @@
 // Group 2-2
 // Garrett Ashcroft, Caroline Tobler, Jared Rosenlund, Vivian Solgere
 
-
-/* methods:
-public string printBoard(array)
-public string checkWinner(array)
-
-The “Driver” class (the Program.cs class with the main method where the program begins) will: 
-    • Welcome the user to the game 
-    • Create a game board array to store the players’ choices 
-    • Ask each player in turn for their choice and update the game board array 
-    • Print the board by calling the method in the supporting class 
-    • Check for a winner by calling the method in the supporting class, 
-    and notify the players when a win has occurred and which player won the game 
-*/
-
 using System.Reflection.Metadata.Ecma335;
 
 TicTacTools tt = new TicTacTools();
@@ -30,7 +16,6 @@ string again = "";
 string board = "";
 string input = "";
 
-
 Console.WriteLine("Welcome to TicTacToe!");
 Console.WriteLine("Game Rules: Pick a side, X's or O's. On your turn, enter the number with the corresponding position on the board below:");
 // Add code to show the user the board layout 
@@ -40,7 +25,6 @@ gameBoard = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
 Console.WriteLine(tt.printBoard(gameBoard));
 Console.WriteLine();
 Console.WriteLine("======================");
-
 
 while (playAgain == true)
 {
@@ -171,6 +155,5 @@ while (playAgain == true)
         }
     }
 }
-
 
 Console.WriteLine("Thank you for playing! Come again soon!");
