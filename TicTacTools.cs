@@ -16,7 +16,7 @@ public class TicTacTools
 				if (i < board.Length - 1)
 				{
 					stringBuilder.AppendLine();
-					stringBuilder.AppendLine("-----");
+					stringBuilder.AppendLine("----------");
 				}
 			}
 			else
